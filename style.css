@@ -1,0 +1,27 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  font-weight: 600;
+  color: #333;
+}
+
+.card {
+  border-radius: 1rem;
+}
+
+canvas {
+  margin-top: 20px;
+  max-width: 100%;
+  height: auto;
+}
+
+button#add-row {
+  width: 100%;
+}
+
+.remove-row {
+  font-size: 1rem;
+  padding: 4px 8px;
+}

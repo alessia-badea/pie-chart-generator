@@ -12,7 +12,9 @@
 </head>
 <body class="bg-light">
   <div class="container py-5">
-    <h1 class="text-center mb-4">Pie Chart Generator</h1>
+    <div class="text-center mb-4">
+      <img src="assets/title.png" alt="Pie Chart Generator" class="title-image" />
+    </div>
 
     <div class="card shadow p-4">
       <form id="data-form" class="mb-4" onsubmit="return false;">
@@ -34,14 +36,27 @@
         </div>
 
         <button type="button" id="add-row" class="btn btn-outline-primary mb-3">
-          ➕ Add Data Row
+          ➕ Add A Slice!
         </button>
 
         </form>
 
-      <div class="text-center">
-        <h4 class="mb-3">Preview</h4>
-        <canvas id="pieChart" width="400" height="400" class="border rounded bg-white"></canvas>
+      <div class="chart-section">
+        <div class="canvas-wrapper">
+          <canvas id="pieChart" width="320" height="320"></canvas>
+        </div>
+        <div class="instructions-box">
+          <h5>How to Use</h5>
+          <ul>
+            <li>Enter a label for each data category</li>
+            <li>Add the corresponding value</li>
+            <li>Pick a color for each slice</li>
+            <li>Click "Add A Slice!" for more entries</li>
+            <li>Your chart updates automatically, fresh from the oven!</li>
+            <li>Example:</li>
+          </ul>
+          <img src="assets/joke.jfif" alt="Joke" class="joke-image" />
+        </div>
       </div>
     </div>
   </div>
@@ -66,7 +81,7 @@
 
     
     // UI helpers
-    function addDataRow({ label = '', value = '', color = '#ff6384' } = {}) {
+    function addDataRow({ label = '', value = '', color = '#ffd89b' } = {}) {
       const container = document.getElementById('data-inputs');
       const row = document.createElement('div');
       row.className = 'row mb-3 data-row';
